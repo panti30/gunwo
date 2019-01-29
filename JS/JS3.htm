@@ -6,28 +6,29 @@
 
 
 
-<p id="demo"></p>
+<p id="demo1"></p>
 
 
-<button type="button"
-onclick="handleClick()"> Kliknij </button>
+<button
+    type="button"
+    onclick="handleClick()"
+>Kliknij</button>
 
 <script>
-function handleClick() {
 
-document.getElementById("demo1").innerHTML = 
-
-"Ania";
-}
 
 function handleClick() {
-
-
-console.log("Ania");
-
+    displayAniaHTML();
+    displayAniaConsole();
 }
 
+function displayAniaHTML() {
+    document.getElementById('demo1').innerHTML = 'Ania';
+}
 
+function displayAniaConsole() {
+    console.log('Ania');
+}
 
 </script>
 

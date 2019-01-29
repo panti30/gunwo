@@ -12,7 +12,7 @@
 
 <script>
 
- var person = {
+ let person = {
      firstName : "Pjotere ",
      lastName : "Ryczkere ",
      age : "too much ",
@@ -27,10 +27,18 @@
 // person.age + "years old " + "ale ma " + 
 // person.eyeColor + "oczkere";
 
-document.getElementById('demo1').innerHTML = `${person.firstName} ${person.lastName} is ${person.age} years old ale ma ${person.eyeColor} oczkere`;
+// document.getElementById('demo1').innerHTML = `${person.firstName} ${person.lastName} is ${person.age} years old ale ma ${person.eyeColor} oczkere`;
 
-const { firstName, lastName, age, eyeColor } = person;
-document.getElementById('demo2').innerHTML = `${firstName} ${lastName} is ${age} years old ale ma ${eyeColor} oczkere`;
+let { firstName, lastName, age, eyeColor } = person;
+// document.getElementById('demo2').innerHTML = `${firstName} ${lastName} is ${age} years old ale ma ${eyeColor} oczkere`;
+
+firstName = 'Anjere';
+console.log(person.firstName)
+
+
+let firstNameSecond = person.firstName;
+firstNameSecond = 'Anjere';
+console.log( person.firstName)
 
      
 </script>
