@@ -14,16 +14,32 @@
     onclick="handleClick()"
 >Kliknij</button>
 
+<input 
+    type="text"
+    id="imie"
+/> 
+
 <script>
 
 
 function handleClick() {
-    displayAniaHTML();
-    displayAniaConsole();
+    // displayAniaHTML();
+    // displayAniaConsole(); 
+
+    // const imie = document.getElementById
+    // const mojSuperDokument = document;
+    // const inputImie = mojSuperDokument.getElementById('imie');
+    // const imie = inputImie.value;
+
+const imie = document.getElementById('imie').value  
+    console.log(imie); 
 }
 
 function displayAniaHTML() {
-    document.getElementById('demo1').innerHTML = 'Ania';
+    // document.getElementById('demo1').innerHTML = '<a href="http://www.google.pl"> Ania </a>'; 
+
+    document.getElementById('demo1').innerHTML; // = "<a href='http://www.google.pl'> Ania </a>";
+
 }
 
 function displayAniaConsole() {
