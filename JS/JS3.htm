@@ -12,10 +12,14 @@
 
 
 
-<form action="http://google.pl" onSubmit="handleClick()">
+<form action="http://google.pl" onsubmit="wysylanie">
+   
+
+   
     <button
-    type="button"
- 
+    type="submit"
+    id= "wysylanie"
+    
 >Kliknij</button>
 
 <input 
@@ -29,6 +33,12 @@
 
 </form>
 <script>
+
+function wysylanie(zdarzenie) {
+
+    zdarzenie.preventDefault()
+
+}
 
 function dodawanie(liczba1, liczba2) {
 
