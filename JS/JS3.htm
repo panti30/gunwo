@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <head></head>
 <body>
 
     <h1> Chujowy formularz3 </h1>
@@ -9,18 +10,32 @@
 <p id="demo1"></p>
 
 
-<button
+
+
+<form action="http://google.pl" onSubmit="handleClick()">
+    <button
     type="button"
-    onclick="handleClick()"
+ 
 >Kliknij</button>
 
 <input 
-    type="text"
-    id="imie"
+    type="number"
+    id="liczba1"
 /> 
+<input
+    type ="number"
+    id="liczba2"
+/>
 
+</form>
 <script>
 
+function dodawanie(liczba1, liczba2) {
+
+const suma = liczba1 + liczba2;
+return suma
+
+}
 
 function handleClick() {
     // displayAniaHTML();
@@ -30,9 +45,13 @@ function handleClick() {
     // const mojSuperDokument = document;
     // const inputImie = mojSuperDokument.getElementById('imie');
     // const imie = inputImie.value;
-
-const imie = document.getElementById('imie').value  
-    console.log(imie); 
+    
+    const mojaliczba1 = +document.getElementById('liczba1').value
+     const mojaliczba2 = +document.getElementById('liczba2').value
+    const mojasuma = dodawanie(mojaliczba1, mojaliczba2)
+    console.log(mojasuma);
+// const imie = document.getElementById('imie').value  
+    // console.log(imie); 
 }
 
 function displayAniaHTML() {
