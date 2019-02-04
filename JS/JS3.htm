@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <head></head>
 <body>
 
     <h1> Chujowy formularz3 </h1>
@@ -9,46 +10,65 @@
 <p id="demo1"></p>
 
 
-<button
-    type="button"
-    onclick="handleClick()"
+
+
+    <button
+    type="submit"
+    id= "wysylanie"
+    
 >Kliknij</button>
 
+<select id="dzialania" onchange="dzialania()">
+        <option value="dodawanie">dodawanie</option>
+        <option value="odejmowanie">odejmowanie</option>
+        <option value="mnozenie">mnozenie</option>
+        <option value="dzielenie">dzielenie</option>
+        
+    </select>
+
 <input 
-    type="text"
-    id="imie"
+    type="number"
+    id="liczba1"
 /> 
+<input
+    type ="number"
+    id="liczba2"
+/>
 
 <script>
 
 
-function handleClick() {
-    // displayAniaHTML();
-    // displayAniaConsole(); 
+function dzialania() {
+    // var liczba1 = 1;
+    // var liczba2 = 13;
 
-    // const imie = document.getElementById
-    // const mojSuperDokument = document;
-    // const inputImie = mojSuperDokument.getElementById('imie');
-    // const imie = inputImie.value;
+    var dzialanie = document.getElementById("dzialania").value;
+    console.log(dzialanie)
 
-const imie = document.getElementById('imie').value  
-    console.log(imie); 
+    var magda = +document.getElementById("liczba1").value;
+    var kasia = +document.getElementById("liczba2").value;
+
+    let wynik;
+
+    if (dzialanie === "odejmowanie") {
+        wynik = magda - kasia;
+    }
+    if (dzialanie === "dodawanie") {
+        wynik = magda + kasia;
+    }
+    if (dzialanie === "mnozenie") {
+        wynik = magda * kasia;
+    }
+    if (dzialanie === "dzielenie") {
+        wynik = magda / kasia;
+    }
+    console.log(wynik);
 }
 
-function displayAniaHTML() {
-    // document.getElementById('demo1').innerHTML = '<a href="http://www.google.pl"> Ania </a>'; 
 
-    document.getElementById('demo1').innerHTML; // = "<a href='http://www.google.pl'> Ania </a>";
 
-}
-
-function displayAniaConsole() {
-    console.log('Ania');
-}
 
 </script>
-
-
 
 </body>
 </html>
