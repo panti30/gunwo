@@ -12,15 +12,19 @@
 
 
 
-<form action="http://google.pl" onsubmit="wysylanie">
-   
-
-   
     <button
     type="submit"
     id= "wysylanie"
     
 >Kliknij</button>
+
+<select id="dzialania" onchange="dzialania()">
+        <option value="dodawanie">dodawanie</option>
+        <option value="odejmowanie">odejmowanie</option>
+        <option value="mnozenie">mnozenie</option>
+        <option value="dzielenie">dzielenie</option>
+        
+    </select>
 
 <input 
     type="number"
@@ -31,53 +35,40 @@
     id="liczba2"
 />
 
-</form>
 <script>
 
-function wysylanie(zdarzenie) {
 
-    zdarzenie.preventDefault()
+function dzialania() {
+    // var liczba1 = 1;
+    // var liczba2 = 13;
 
+    var dzialanie = document.getElementById("dzialania").value;
+    console.log(dzialanie)
+
+    var magda = +document.getElementById("liczba1").value;
+    var kasia = +document.getElementById("liczba2").value;
+
+    let wynik;
+
+    if (dzialanie === "odejmowanie") {
+        wynik = magda - kasia;
+    }
+    if (dzialanie === "dodawanie") {
+        wynik = magda + kasia;
+    }
+    if (dzialanie === "mnozenie") {
+        wynik = magda * kasia;
+    }
+    if (dzialanie === "dzielenie") {
+        wynik = magda / kasia;
+    }
+    console.log(wynik);
 }
 
-function dodawanie(liczba1, liczba2) {
 
-const suma = liczba1 + liczba2;
-return suma
 
-}
-
-function handleClick() {
-    // displayAniaHTML();
-    // displayAniaConsole(); 
-
-    // const imie = document.getElementById
-    // const mojSuperDokument = document;
-    // const inputImie = mojSuperDokument.getElementById('imie');
-    // const imie = inputImie.value;
-    
-    const mojaliczba1 = +document.getElementById('liczba1').value
-     const mojaliczba2 = +document.getElementById('liczba2').value
-    const mojasuma = dodawanie(mojaliczba1, mojaliczba2)
-    console.log(mojasuma);
-// const imie = document.getElementById('imie').value  
-    // console.log(imie); 
-}
-
-function displayAniaHTML() {
-    // document.getElementById('demo1').innerHTML = '<a href="http://www.google.pl"> Ania </a>'; 
-
-    document.getElementById('demo1').innerHTML; // = "<a href='http://www.google.pl'> Ania </a>";
-
-}
-
-function displayAniaConsole() {
-    console.log('Ania');
-}
 
 </script>
-
-
 
 </body>
 </html>
