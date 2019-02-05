@@ -31,6 +31,7 @@
 
 <input type="submit" value="Potwierdz">
 
+
 </form>
 <div>
     <p></p>
@@ -40,12 +41,18 @@
 
 <script>
 
-var radio = document.querySelectorAll('input[name="option1"]: checked');
-forEach {
-    console.log(radio)
-} 
-document.addEventListener
 
+
+function wyswietlWartoscAktywnejPozycji() {
+    console.log(document.querySelector('[name="option1"]:checked').value)
+}
+
+document.querySelectorAll('[name="option1"]').forEach(dlaKazdegoElementuDodajNasluchiwanieZdarzeniaChange)
+
+function dlaKazdegoElementuDodajNasluchiwanieZdarzeniaChange(elementRadioOWartosciOption1AtrybutuName) {
+    elementRadioOWartosciOption1AtrybutuName.addEventListener('change', wyswietlWartoscAktywnejPozycji)
+
+}
 
 
 </script>
