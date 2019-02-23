@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<body>
+
+<h1> Picie alkoholu w Polsce</h1>
+
+<p>wpisz swoj wiek i sprawdz, czy mozesz pic alkohol</p>
+
+<input id="age" value="18">
+
+<button onclick="check()"> Sprawdz, czy mozesz pić </button>
+
+<p id="chuj"> </p>
+
+<script>
+
+function check() {
+    var wiek, mogePic;
+
+    wiek = Number(document.getElementById("age").value);
+
+    if  (wiek < 5 ) { 
+        mogePic =  "Polska nie jest Patologią";
+        
+    }
+    else if  (isNaN(wiek)) {
+        
+        mogePic = "Chyba juz jesteś pijany"
+
+    }
+    
+    else {
+    mogePic = (wiek < 18) ? "Nie mozesz" : "Mozesz"; 
+    }
+    document.getElementById("chuj").innerHTML = mogePic; 
+}
+
+
+
+
+
+var imiona = ['Ania', 'Michał'];
+
+ 
+// imiona.forEach(function(imie) {
+
+// })
+
+
+
+
+</script>
+
+</body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Class Name</h1>
+
+
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>F</li>
+</ul>
+
+
+
+<script>
+
+
+var elementyLi = document.querySelectorAll("ul > li");
+elementyLi.forEach(function(mojJedenElementLi, index) {
+    if (index % 2 == 1) {
+
+
+
+        mojJedenElementLi.innerHTML += 1;
+    }
+    // console.log(mojJedenElementLi.innerHTML)
+});
+</script>
