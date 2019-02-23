@@ -17,7 +17,7 @@
 
 <h1> Oferta super slodyczy</h1>
 
-<ul class="list">
+<ul class="list" id="list">
     <li>czekolada</li>
     <li>karmel</li>
     <li>pralinki</li>
@@ -26,11 +26,107 @@
 </ul>
 
 
-<select>
+<select id="slodycze" name="slodycze">
     <option value="czekolada"> czekolada</option>
     <option value="karmel"> karmel</option>
     <option value="pralinki"> pralinki</option>
     <option value="ciasto"> ciasto</option>
 </select>
+
+<div id="tu-lista">
+<!-- <ul>
+    <li>karmel</li>
+    <li>czekolada</li>
+</ul> -->
+
+</div>
     
 </body>
+
+<ul id="tu-lista">
+
+
+
+
+
+
+<!--ul#tu-lista  ul > li -->
+
+<script>
+// function ustawHTMLdlaLi(mojaSuperNazwa) {
+//     document.getElementById("list").querySelectorAll('li').forEach(function(elementLi){
+// elementLi.innerHTML = mojaSuperNazwa;
+// }) 
+
+// }
+// WyborSlodyczy()
+
+// function WyborSlodyczy() {
+// document.querySelector('select[name="slodycze"]').onchange = () => {
+    
+//     ustawHTMLdlaLi(document.getElementById('slodycze').value )
+// }
+// }
+
+// a = a +b; to samo co a += b;
+
+var tablica=['karmel', 'czekolada', 'gowno' ,'jeszcze kurwa wiecej', 'malo elementow?', 'za mloa?', 'jeeeeeszcze', 'ale ja kurwa lubie pisac', 'a', 'b','chuj']
+
+
+
+var zadanie = document.querySelectorAll('ul#tu-lista ul, ul#tu-lista ul > li');
+zadanie.forEach(x);
+
+function x (lista1) 
+{
+ 
+     console.log(lista1)
+ } 
+
+ tablica.forEach(
+    function(x) {
+        console.log(x)
+    }
+);
+
+// console.log(['karmel', 'czekolada', 'gowno'].reduce(function(previousValue, currentValue) {
+//   return previousValue + currentValue;
+// }));
+
+
+// var lista = tablica.map(function(rzecz) {
+//     return 'slodycz';
+// })
+// // ['slodycz-i-karmel', 'slodycz-czekolada'...]
+
+// console.log(lista);
+
+
+
+
+
+// .innerHTML = 'ghhgfhgfhfhfgghf';
+
+// function()
+
+
+
+// var slodycze = document.querySelectorAll('ul.list > li');
+// slodycze.forEach(showOnConsole);
+
+// function showOnConsole(oneElement) {
+ 
+//     console.log(oneElement)
+// } 
+
+// document.querySelector('select[name="slodycze"]').onchange = () => { console.log('wywolanie change') }
+
+// function sweets () {
+// var sweets = document.getElementById("slodycze").value = () => {
+//  console.log('sweets')
+// } 
+
+// }
+
+</script>
+</html>
