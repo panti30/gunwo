@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p></p>
+
+<p id="poid"></p>
+
+<script>
+var person = {
+    fullname: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+var Kuoka = {
+    firstName: "Ania",
+    lastName: "Kuoczka",
+}
+
+var Susel = {
+    firstName: "Pjotere",
+    lastName: "Ryczkere",
+}
+
+x = person.fullname.call(Kuoka);
+y = person.fullname.call(Susel);
+document.getElementById("poid").innerHTML = x + "<br>" + y;
+
+</script>
+
+</body>
+</html>
+

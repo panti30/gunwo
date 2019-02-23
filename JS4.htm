@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Object Method</h1>
+    <p> using get </p>
+    <p id="triPoloski"> </p>
+
+<script>
+
+class KlasaMojaLiczba {
+
+    constructor() {
+        this.counter = 0;
+    }
+
+    add(oIleDodac) {
+        this.counter += oIleDodac;
+    }
+
+    substract(ileOdjac) {
+        this.counter -= ileOdjac; 
+    }
+
+    increment() {
+        this.counter++
+    }
+
+};
+
+
+new String()
+
+var chuj = new String('asdasdasdasd');
+console.log(chuj.toString())
+var liczbaA = new KlasaMojaLiczba();
+var liczbaB = new KlasaMojaLiczba();
+
+liczbaA.add(10);
+liczbaA.substract(1);
+liczbaA.increment();
+liczbaA.substract(4);
+
+
+liczbaB.add(5);
+
+
+
+console.log(liczbaA);
+console.log(liczbaB)
+</script>
+
+
+</body>
+</html>
