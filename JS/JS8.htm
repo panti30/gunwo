@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Lista</h1>
+<p> W console.log ma sie wyswietlac element klikniety i poprzedni</p>
+
+<ul id="idListy">
+    <li>dom</li>
+    <li>pjotere</li>
+    <li>kutas</li>
+    <li>kutas</li>
+    <li>nobelon</li>
+    <li>zmiana</li>
+</ul>
+
+<input type="text" id="zmiana" />
+
+<input type="text" id="tekst" />
+
+<button onclick="zmienTekst()" type="button"> Zmień </button>
+
+<script>
+
+
+
+function zmienTekst() {
+    var zmiana = document.getElementById("zmiana").value;     
+
+    var tekst = document.getElementById("tekst").value;
+
+    var mojeWszystkieLi = znajdzWszystkieLi(zmiana);
+
+    if (mojeWszystkieLi) {
+        mojeWszystkieLi.forEach(function(jedenLi) {
+            jedenLi.innerHTML = tekst
+        })
+    } else {
+
+        console.log("nie znalazlem kurwy")
+    }
+
+    
+}
+
+
+
+
+function znajdzWszystkieLi(tekstWLi) {
+    // var znalezioneLi = Array.from(document.querySelectorAll("li")).find(elementLi => elementLi.innerHTML == tekstWLi);
+    var znalezioneWszystkieLi = Array.from(document.querySelectorAll("li")).filter(elementLi => elementLi.innerHTML == tekstWLi);
+      
+    return znalezioneWszystkieLi;
+}
+
+
+
+</script>

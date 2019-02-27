@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+#container {
+
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: tomato;
+}
+#animate {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: rgb(26, 127, 161);
+}
+#animate2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: rgb(161, 15, 100);
+}
+
+</style>
+<body>
+
+<h1>animacje</h1>
+
+<p><button onclick = "kwadrat1(); kwadrat2()"> Kliknij</button></p>
+<!-- <p><button onclick = "kwadrat2()"> Kliknij</button></p> -->
+
+<h2 onclick="supra(event); smoker()">What you show me? </h2>
+
+<div id="container">
+    <div id="animate"></div>
+    <div id="animate2"></div>
+</div>
+
+<script>
+
+function supra() {
+    console.log(this)
+    this.innerHTML = "supra";
+}
+function smoker() {
+    this.innerHTML = "one smoker";
+}
+function kwadrat1() {
+    var element = document.getElementById("animate");
+    var pos = 340
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (pos == 0) {
+            clearInterval(id);
+        } else {
+            pos--;
+            element.style.top = pos + "px";
+            element.style.right = pos + "px";
+        }
+    }
+}
+
+function kwadrat2() {
+    var element = document.getElementById("animate2");
+    var pos = 0
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (pos == 340) {
+            clearInterval(id);
+        } else {
+            pos++;
+            element.style.top = pos + "px";
+            element.style.left = pos + "px";
+        }
+    }
+}
+</script>
+</body>
+</html>
