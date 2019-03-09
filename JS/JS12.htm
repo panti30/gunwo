@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1> rzeczy </h1>
+  <p id="okienko"></p>
+
+    <button onclick="naKlikniecie()"> kliknij</button>
+<script>
+function naKlikniecie() {
+    var txt;
+    if (confirm("press a button")) {
+        txt = "OK"
+    } else {
+        txt ="Cancel"
+    }
+    document.getElementById("okienko").innerHTML = txt;
+}
+
+</script>
+</body>
+</html>

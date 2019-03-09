@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="soki">
+    <li>malinowy</li>
+   <li>truskawkowy</li>
+   <li>porzeczkowy</li>
+</ul>
+
+<script>
+
+var formularz = `<form>
+<input type='text'>
+<button type='submit'>zapisz</button>
+</form>`
+
+
+
+
+document.getElementById("soki").querySelectorAll('li').forEach(function(li){
+   li.addEventListener('click', obsluzKlikniecieNaFormularz)  
+ })
+
+ function obsluzKlikniecieNaFormularz(event) {
+    zmienNaFormularz(event.target)
+ }
+
+
+function zmienNaFormularz(element) {
+    var text = element.innerHTML
+    element.innerHTML = formularz;
+   var mojInput = element.querySelectorAll("input")[0];
+   mojInput.value = text
+
+    element.removeEventListener('click', obsluzKlikniecieNaFormularz)
+    var form = element.querySelectorAll('form')[0];
+    form.addEventListener('submit',obsluzKlikniecieNaTekst )
+   // tutaj zdarzenia
+
+}
+
+
+
+ function obsluzKlikniecieNaTekst(event) {
+     event.preventDefault()
+    zmienNaTekst(event.target.parentNode)
+ }
+
+function zmienNaTekst(element) {
+   var input = element.querySelectorAll('input')[0];
+   var text = input.value 
+
+
+    element.innerHTML = text
+    element.addEventListener('click',obsluzKlikniecieNaFormularz)
+    // tutaj zdarzenaia
+}
+
+</script>
+
+</body>
+</html>

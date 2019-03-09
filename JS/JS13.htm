@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="app"></div>
+
+
+    <div id="whatYouShow"></div>
+
+<script>
+var app = document.getElementById("app");
+var show = document.getElementById("whatYouShow")
+var aktualnieEdytowanyLi = null;
+
+var lista = ['dom', 'chata', 'szalas', 'ziemianka'];
+
+var listaHTML = "<ul>"
+
+lista.forEach(function(budynek) {
+    listaHTML += "<li>" + budynek + "</li>"
+})
+
+listaHTML += "</ul>"
+
+app.innerHTML = listaHTML;
+
+
+var formularz = `<form>
+<input type='text'>
+<button type='submit'>Zapisz<button>
+<form>`
+
+app.querySelectorAll('li').forEach(function(li){
+    li.addEventListener('click', obsluzKlikniecieNaFormularz); 
+
+ });
+ 
+ 
+ function obsluzKlikniecieNaFormularz(event) {
+    zmienNaFormularz(event.target)
+ }
+
+function zmienNaFormularz(li) {
+    var text = li.innerHTML
+    // element.innerHTML = formularz;
+    show.innerHTML = formularz;
+    var mojInput = show.querySelector("input");
+    mojInput.value = text;
+
+    aktualnieEdytowanyLi = li;
+
+    
+}
+
+function zapiszTekst() {
+   var wartoscInputa = show.querySelector('input').value;
+   aktualnieEdytowanyLi.innerHTML = wartoscInputa
+}
+
+</script>
+</body>
+</html>
